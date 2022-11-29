@@ -2,7 +2,7 @@ before_script:
   - virtualenv --quiet --python=python3 .
   - source bin/activate
 
-test pages:
+test:
   tags:
     - base
   stage: test
@@ -16,7 +16,7 @@ test pages:
   rules:
     - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
 
-public pages:
+public:
   tags:
     - base
   stage: deploy
